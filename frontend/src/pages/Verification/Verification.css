@@ -1,0 +1,93 @@
+.home{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 16px;
+    position: relative;
+}
+
+.home .error{
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(237, 76, 76);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.home .error.show{
+    top: 0;
+}
+
+.home .error p{
+    font-size: 24px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.home .container{
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.home .container form h4{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.home .container form button{
+    background-color: #10024A;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    font-size: 24px;
+    width: 100%;
+    max-width: 250px;
+    border: 1.5px solid #10024A;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.home .container form button:hover{
+    background-color: white;
+    color: #10024A;
+}
+
+.home .container form .inputs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.home .container form .inputs input{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 24px;
+}
