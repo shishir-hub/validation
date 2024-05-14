@@ -62,7 +62,7 @@ function Verification() {
   };
 
   const handlePaste = (e) => {
-    let value = e.clipboardData.getData("Text");
+    let value = (e.clipboardData || window.clipboardData).getData("Text");
     if (value.toString().length === inputRef.current.length && Number(value)) {
       let temp = [...codes];
       inputRef.current.forEach((el, i) => {
