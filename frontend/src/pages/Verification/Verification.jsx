@@ -61,6 +61,18 @@ function Verification() {
     }
   };
 
+  const handlePaste = (e) => {
+    let value = e.clipboardData.getData("Text");
+    if (value.toString().length === inputRef.current.length && Number(value)) {
+      let temp = [...codes];
+      inputRef.current.forEach((el, i) => {
+        temp[i] = value[i];
+        el.focus();
+      });
+      setCodes(temp);
+    }
+  };
+
   useEffect(() => {
     inputRef.current[0] && inputRef.current[0].focus();
   }, []);
@@ -90,6 +102,7 @@ function Verification() {
                   min="0"
                   max="9"
                   disabled={loading}
+                  onPaste={handlePaste}
                 />
               );
             })}
